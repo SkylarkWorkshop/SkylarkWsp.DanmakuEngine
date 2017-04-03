@@ -12,8 +12,8 @@ Kevin Gao：gaojunxuanbox@live.com （微博/Twitter：@Coding的高同学/@kevi
 
 Hao Ling：lingmengc@outlook.com（微博：@ Future_Labs）
 
-![0-sample](https://skylark-workshop.xyz/content/images/2016/05/Screenshot--576-.png)
-![1-sample](https://skylark-workshop.xyz/content/images/2016/05/Screenshot--577-.png)
+![0-sample](https://slwsp-new-res.azureedge.net/blog/content/images/2016/05/Screenshot--576-.png)
+![1-sample](https://slwsp-new-res.azureedge.net/blog/content/images/2016/05/Screenshot--577-.png)
 
 其中包含了
 
@@ -228,7 +228,7 @@ BiliDanMuModel biliModel2 = (BiliDanMuModel)biliModel;
 
 ##如何使用
 首先，在项目中引用 SkylarkWsp.DanmakuEngine
-![2-addref](https://skylark-workshop.xyz/content/images/2016/05/Screenshot--575-.png)
+![2-addref](https://slwsp-new-res.azureedge.net/blog/content/images/2016/05/Screenshot--575-.png)
 在XAML中，引用SkylarkWsp.DanmakuEngine命名空间
 
 ```xaml
