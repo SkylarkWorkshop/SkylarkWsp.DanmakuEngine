@@ -140,7 +140,7 @@ Hao Ling：lingmengc@outlook.com（微博：@ Future_Labs）
 -	```public void SetLimit(int count)```
 设定DanmakuPresenter的最大弹幕数量限制
 
-###事件
+### 事件
 -	多数MediaElement自带的事件及其处理
 
 -	```public event RoutedEventHandler DanmakuLoadStart```
@@ -152,7 +152,7 @@ Hao Ling：lingmengc@outlook.com（微博：@ Future_Labs）
 -	```public event DanmakuExceptionRoutedEventHandler DanmakuLoadFailed```
 在弹幕加载出现错误或播放过程中因弹幕出现问题而引发异常时触发的事件
 
-###属性和 Dependency Properties
+### 属性和 Dependency Properties
 -	多数 MediaElement 的内置属性，例如 Source、Volume 等
 
 -	``ShowLogger``
