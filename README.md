@@ -3,7 +3,7 @@
 
 An open-source danmaku engine for UWP apps
 
-##简介
+## 简介
 SkylarkWsp.DanmakuEngine（Codename HikariEngine）是一个为UWP平台设计的，弹幕引擎和控件库。由Skylark Workshop开发。
 
 联系方式：
@@ -49,9 +49,9 @@ Hao Ling：lingmengc@outlook.com（微博：@ Future_Labs）
 
 一个演示DanmakuEngine使用方法的UWP应用，从Bilibili上获取样例弹幕数据并显示。（此应用内置了ギリギリEYE，请谨慎使用）
 
-##DanmakuManager
+## DanmakuManager
 
-###方法
+### 方法
 -	构造函数 public DanmakuManager(Grid container)
 
 将指定Grid作为容器，初始化DanmakuManager	
@@ -107,18 +107,18 @@ Hao Ling：lingmengc@outlook.com（微博：@ Future_Labs）
 -	```private double GetDefaultFontSize(double size)```
 获取默认字体大小（未定）
 
-###枚举
+### 枚举
 -	``DanmakuMode``
 指定弹幕类型，分别为：顶部固定、从右至左滚动、从左至右滚动（未实现）、底部固定、高级（未实现）、脚本（未实现）
 
 -	``DanmakuSource``
 指定了弹幕数据的源，分别为：AcFun、Bilibili、Niconico和其他
 
-##DanmakuPresenter
+## DanmakuPresenter
 无特殊的方法，使用姿势和Manager类似。
 
-##DanmakuPlayer
-###方法
+## DanmakuPlayer
+### 方法
 -	```public void SetDanmakuSource(ObservableCollection<Danmaku> source)```
 将当前弹幕播放器的弹幕源设定为指定的ObservableCollection（正考虑使用List替代ObservableCollection）
 
@@ -158,7 +158,7 @@ Hao Ling：lingmengc@outlook.com（微博：@ Future_Labs）
 -	``ShowLogger``
 DependencyProperty，指定了是否显示日志控件
 
-##DanmakuFactory
+## DanmakuFactory
 1.	通过创建IDanmuFactory来获取弹幕 Model，提供 BiliDanmuFactory 和 AcDanmuFactory 两个工厂类，同时可以继续拓展实例工厂类。
 例如：
 ```csharp
@@ -177,9 +177,9 @@ DanmuModelBase biliModel = await fac.CreateDanMuModel("5212471");
 BiliDanMuModel biliModel2 = (BiliDanMuModel)biliModel;
 ```
 
-##DanmakuParser
+## DanmakuParser
 调用DanmakuFactory实现对弹幕数据的Parsing
-###方法
+### 方法
 -	```public static async Task<BiliDanmakuModel> GetBiliDanmaku(string id)```
 使用指定的ID从Bilibili获取弹幕数据
 
@@ -193,7 +193,7 @@ BiliDanMuModel biliModel2 = (BiliDanMuModel)biliModel;
 使用指定的ID从AcFun获取弹幕数据，并使用指定URI作为弹幕源服务器地址
 
 
-##Danmaku 类型
+## Danmaku 类型
 所有弹幕数据的类型，包含如下属性
 
 -	```public string Content { get; set; }```
@@ -226,7 +226,7 @@ BiliDanMuModel biliModel2 = (BiliDanMuModel)biliModel;
 -	```public bool IsShowed { get; set; }```
 指示弹幕是否已经在 DanmakuPlayer 中显示过，以避免重复显示
 
-##如何使用
+## 如何使用
 首先，在项目中引用 SkylarkWsp.DanmakuEngine
 ![2-addref](https://slwsp-new-res.azureedge.net/blog/content/images/2016/05/Screenshot--575-.png)
 在XAML中，引用SkylarkWsp.DanmakuEngine命名空间
@@ -245,12 +245,12 @@ xmlns:Danmaku="using:SkylarkWsp.DanmakuEngine"
 
 调用 ```player.Play();``` 开始播放
 
-##Contributing
+## Contributing
 各位菊苣，dalao啊，欢迎提出各种吐槽、意见和bug，您可以发送PULL请求来提交您的贡献，定会感激不尽orz。
 
 Submit Pull Requests to contribute to this project.
 
-##License
+## License
 MIT License
 
 Copyright (c) 2016 Skylark Workshop
