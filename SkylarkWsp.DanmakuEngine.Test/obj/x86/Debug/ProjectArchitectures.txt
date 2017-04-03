@@ -1,0 +1,2 @@
+C:\Users\gaoju\Source\Repos\SkylarkWsp.DanmakuEngine\SkylarkWsp.DanmakuEngine.Test\SkylarkWsp.DanmakuEngine.Test.csproj;x86
+C:\Users\gaoju\Source\Repos\SkylarkWsp.DanmakuEngine\SkylarkWsp.DanmakuEngine\SkylarkWsp.DanmakuEngine.csproj;neutral

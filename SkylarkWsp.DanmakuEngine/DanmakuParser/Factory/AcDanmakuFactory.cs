@@ -8,6 +8,7 @@ using Windows.Data.Json;
 using Windows.Web.Http;
 using System.Collections.ObjectModel;
 using SkylarkWsp.DanmakuEngine.Extension;
+using Windows.UI;
 
 namespace SkylarkWsp.DanmakuEngine.DanmakuParser.Factory
 {
@@ -61,7 +62,7 @@ namespace SkylarkWsp.DanmakuEngine.DanmakuParser.Factory
 
         async Task ParseToModelCollection(AcDanmakuModel model, string id)
         {
-            model.DanmakuCollection = new ObservableCollection<Model.Danmaku>();
+            model.DanmakuCollection = new List<Model.Danmaku>();
 
             string response = await GetStringFromInternet(GetDanmakuCompleteUri(id));
 
@@ -93,7 +94,9 @@ namespace SkylarkWsp.DanmakuEngine.DanmakuParser.Factory
                         mode = DanmakuMode.Scroll;
                         break;
                 }
-                model.DanmakuCollection.Add(new Danmaku() { Content = item.GetObject().GetNamedString("m"), PositionData = posData, Time = Convert.ToDouble(posData[0]), ForegroundColor = (Convert.ToInt32(posData[1]) | 0xFF000000).ToColor(),Mode= mode,Size= Convert.ToInt32(posData[3]) });
+                int fore_int = 0;
+                bool fore = Int32.TryParse(posData[1], out fore_int);
+                model.DanmakuCollection.Add(new Danmaku() { Content = item.GetObject().GetNamedString("m"), PositionData = posData, Time = Convert.ToDouble(posData[0]), ForegroundColor = (fore) ? (fore_int | 0xFF000000).ToColor() : Colors.White, Mode= mode,Size= Convert.ToInt32(posData[3]) });
             }
         }
     }

@@ -117,7 +117,7 @@ namespace SkylarkWsp.DanmakuEngine
         /// Set the damaku source
         /// </summary>
         /// <param name="source"></param>
-        public void SetDanmakuSource(ObservableCollection<Danmaku> source)
+        public void SetDanmakuSource(List<Danmaku> source)
         {
             try
             {

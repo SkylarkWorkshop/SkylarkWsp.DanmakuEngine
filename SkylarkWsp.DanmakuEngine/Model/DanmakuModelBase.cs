@@ -9,7 +9,7 @@ namespace SkylarkWsp.DanmakuEngine.Model
 {
     public abstract class DanmakuModelBase
     { 
-        public abstract ObservableCollection<Danmaku> DanmakuCollection { get; set; }
+        public abstract List<Danmaku> DanmakuCollection { get; set; }
          
     }
 }

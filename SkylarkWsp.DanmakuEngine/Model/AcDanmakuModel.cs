@@ -9,6 +9,6 @@ namespace SkylarkWsp.DanmakuEngine.Model
 {
     public class AcDanmakuModel : DanmakuModelBase
     {
-        public override ObservableCollection<Danmaku> DanmakuCollection { get; set; }
+        public override List<Danmaku> DanmakuCollection { get; set; }
     }
 }

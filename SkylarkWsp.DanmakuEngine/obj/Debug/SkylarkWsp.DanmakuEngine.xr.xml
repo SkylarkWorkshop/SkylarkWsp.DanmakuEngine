@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Roots >
+  <Roots.RootTypes>
+    <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
+      <RootProperty Name="Children" />
+      <RootProperty Name="Name" />
+      <RootEvent Name="Loaded" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.MediaElement">
+      <RootProperty Name="Name" />
+      <RootProperty Name="AutoPlay" />
+      <RootProperty Name="AreTransportControlsEnabled" />
+      <RootEvent Name="MarkerReached" />
+      <RootEvent Name="SeekCompleted" />
+      <RootEvent Name="VolumeChanged" />
+      <RootEvent Name="BufferingProgressChanged" />
+      <RootEvent Name="CurrentStateChanged" />
+      <RootEvent Name="DownloadProgressChanged" />
+      <RootEvent Name="MediaEnded" />
+      <RootEvent Name="MediaFailed" />
+      <RootEvent Name="MediaOpened" />
+      <RootEvent Name="RateChanged" />
+    </RootType>
+    <RootType FullName="SkylarkWsp.DanmakuEngine.DanmakuPresenter" />
+    <RootType FullName="SkylarkWsp.DanmakuEngine.Logger">
+      <RootProperty Name="VerticalAlignment" />
+    </RootType>
+    <RootType FullName="SkylarkWsp.DanmakuEngine.DanmakuPlayer" />
+  </Roots.RootTypes>
+</Roots>

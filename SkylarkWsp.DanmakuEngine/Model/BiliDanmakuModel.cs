@@ -12,7 +12,7 @@ namespace SkylarkWsp.DanmakuEngine.Model
     {
         public BiliDanmakuModel()
         {
-            DanmakuCollection = new ObservableCollection<Danmaku>();
+            DanmakuCollection = new List<Danmaku>();
         }
 
         public string Chatserver { get; set; }
@@ -25,6 +25,6 @@ namespace SkylarkWsp.DanmakuEngine.Model
 
         public string Source { get; set; }
 
-        public override ObservableCollection<Danmaku> DanmakuCollection { get; set; }
+        public override List<Danmaku> DanmakuCollection { get; set; }
     }
 }

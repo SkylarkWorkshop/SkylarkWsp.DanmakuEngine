@@ -7,6 +7,7 @@ using System.Xml.Linq;
 using Windows.Web.Http;
 using SkylarkWsp.DanmakuEngine.Model;
 using SkylarkWsp.DanmakuEngine.Extension;
+using Windows.UI;
 
 namespace SkylarkWsp.DanmakuEngine.DanmakuParser.Factory
 {
@@ -28,8 +29,8 @@ namespace SkylarkWsp.DanmakuEngine.DanmakuParser.Factory
             model.Mission = GetValueFromXElement(doc, elementsName[2]);
             model.Maxlimit = GetValueFromXElement(doc, elementsName[3]);
             model.Source = GetValueFromXElement(doc, elementsName[4]);
-
-            foreach (Model.Danmaku item in GetCommentCollection(doc))
+            var coll = GetCommentCollection(doc);
+            foreach (Model.Danmaku item in coll)
             {
                 model.DanmakuCollection.Add(item);
             }
@@ -53,8 +54,8 @@ namespace SkylarkWsp.DanmakuEngine.DanmakuParser.Factory
             model.Mission = GetValueFromXElement(doc, elementsName[2]);
             model.Maxlimit = GetValueFromXElement(doc, elementsName[3]);
             model.Source = GetValueFromXElement(doc, elementsName[4]);
-
-            foreach (Model.Danmaku item in GetCommentCollection(doc))
+            var coll = GetCommentCollection(doc);
+            foreach (Model.Danmaku item in coll)
             {
                 model.DanmakuCollection.Add(item);
             }            
@@ -85,7 +86,9 @@ namespace SkylarkWsp.DanmakuEngine.DanmakuParser.Factory
                         mode = DanmakuMode.Scroll;
                         break;
                 }
-                yield return new Danmaku() { Content= item.Value,PositionData= posData,Time = Convert.ToDouble(posData[0]), ForegroundColor = (Convert.ToInt32(posData[3]) | 0xFF000000).ToColor(), Mode = mode, Size = Convert.ToInt32(posData[2]),UserId=posData[6],DanmakuId=posData[7] };
+                int fore_int=0;
+                bool fore=Int32.TryParse(posData[3], out fore_int);
+                yield return new Danmaku() { Content= item.Value,PositionData= posData,Time = Convert.ToDouble(posData[0]), ForegroundColor = (fore)?(fore_int | 0xFF000000).ToColor():Colors.White, Mode = mode, Size = Convert.ToInt32(posData[2]),UserId=posData[6],DanmakuId=posData[7] };
             }
         }
 
